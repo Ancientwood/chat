@@ -1,0 +1,308 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');*/
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background: #fff;
+}
+
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #111;
+}
+
+.dark h2 {
+    color: #666;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.2em;
+}
+
+.header {
+    padding: 1em 0 .6em;
+    background: #F8F8F8;
+    border-bottom: 0.5px solid #B3B3B3;
+}
+
+h3.written-in-ink {
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: white;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    top: 0;
+}
+
+.dark h3.written-in-ink {
+    background: black;
+}
+
+
+/* Seems necessary to make iframes work on itch.io on mobile iOS :-( */
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.dark .container {
+    background: #000;
+}
+
+p {
+    padding: 0.8em;
+    display: block;
+    position: relative;
+    max-width: 60vw;
+    float: right;
+    clear: both;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.7em;
+    font-weight: 500;
+    text-align: right;
+    background-color: #4D96F5;
+    border-radius: 7px 7px 0 7px;
+}
+
+
+
+a {
+    color: #b97c2c;
+    transition: color 0.6s;
+    text-decoration: none;
+}
+
+.dark a {
+    color: #cc8f1a;
+    transition: color 0.6s;
+}
+
+
+a:hover {
+    color: black;
+    transition: color 0.1s;
+}
+
+.dark a:hover {
+    color: white;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+.dark strong {
+    color: white;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+p.choice {
+    width: 45%;
+    float: initial;
+    margin: 0 auto 1em;
+    padding: 0;
+    background: none;
+    border: 1px solid #4D96F5;
+    text-align: center;
+    border-radius: 7px;
+}
+
+p.choice a {
+    display: block;
+    padding: 0.6em;
+    font-size: 12px;
+    line-height: 1.6em;
+    color: #4D96F5;
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    display: none;
+}
+
+.container * {
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+.container img {
+    width: 80%;
+    display: block;
+    float: left;
+    clear: both;
+    background-color: #E9E9EB;
+    border-radius: 0 20px 20px;
+    padding: 4px;
+}
+
+/* first choice */
+:not(.choice) + .choice {
+    margin-top: 2em; 
+}
+
+
+
+
+/* Built in class if you want to write:
+     The End # CLASS: end
+*/
+.end {
+    display: inherit;
+    max-width: 100%;
+    float: none;
+    text-align: center;
+    font-weight: 300;
+    color: #999;
+    font-size: 12px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: none;
+}
+
+.dark .end {
+    color: white;
+}
+
+/* Font Style
+*/
+.bold{
+	font-weight:bold;
+}
+.bolder{
+	font-weight:bolder;
+}
+.lighter{
+	font-weight:bolder;
+}
+.italic{
+	font-style:italic;
+}
+
+.underline{
+	text-decoration:underline;
+}
+.overline{
+	text-decoration:overline;
+}
+.thoughline{
+	text-decoration:line-through;
+}
+
+.red{
+	color:red;
+}
+.green{
+	color:green;
+}
+.yellow{
+	color:yellow;
+}
+.blue{
+	color:blue;
+}
+.white{
+	color:white;
+}
+.black{
+	color:black;
+}
+.silver{
+	color:silver;
+}
+.gray{
+	color:gray;
+}
+
+
+p.left {
+    float: left;
+    text-align: left;
+    color: #111;
+    background-color: #E9E9EB;
+    border-radius: 0 7px 7px;
+}
+
+p.voice {
+    float: left;
+    text-align: left;
+    color: #E9E9EB;
+    border-radius: 0 7px 7px;
+    background: #E9E9EB no-repeat left;
+    padding-left:35px;
+    animation: voice-play 0.8s infinite;
+    -webkit-animation:voice-play 0.8s infinite;
+}
+
+p.voice:hover {
+    color: #111;
+}
+
+.stop-voice {
+    animation-play-state: paused !important;
+    background-image: url(./images/voice_3.png) !important;
+}
+
+@keyframes  voice-play{
+    0% {background-image: url(./images/voice_1.png);}
+    33.3% {background-image: url(./images/voice_2.png);}
+    100% {background-image: url(./images/voice_3.png);}
+}
+
+@-webkit-keyframes voice-play{
+    0% {background-image: url(./images/voice_1.png);}
+    33.3% {background-image: url(./images/voice_2.png);}
+    100% {background-image: url(./images/voice_3.png);}
+}
